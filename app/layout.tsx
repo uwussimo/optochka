@@ -1,4 +1,5 @@
 import "@/styles/globals.css"
+import { useEffect } from "react"
 import { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
@@ -7,6 +8,8 @@ import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+
+import FacebookPixel from "./components/FacebookPixel"
 
 export const metadata: Metadata = {
   title: {
@@ -47,6 +50,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </div>
             <TailwindIndicator />
           </ThemeProvider>
+          <FacebookPixel />
         </body>
       </html>
     </>
